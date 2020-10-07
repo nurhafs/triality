@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>My Profile</title>
+{% endblock meta %}
+
+{% block content %}
+<div class="main-page">
+    <h1 style="font-size: 6vw;">WELCOME TO</h1>
+    <h2 style="margin-top: 3%;">NUR HAFSARI'S PROFILE WEBPAGE</h2>
+    <div>
+    <h3 style="margin-top: 5%;">GET TO KNOW ABOUT ME</h3>
+        <table class="menu">
+            <tr style="font-size: 2vw;">
+                <td><a href="profile-page.html" class="btn btn-big">PROFILE</a></td>
+                <td><a href="works.html" class="btn btn-big">WORKS</a></td>
+                <td><a href="exp.html" class="btn btn-big">EXPERIENCES</a></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="addon.html" class="btn btn-smol" style="padding: 20px 0px 10px;">I want to find idea</a>
+    </div>
+        <div class="contact-main">
+        <h3 style="margin-top: 3%;">Find me at:</h3>
+        <table class="menu" style="margin-top: 0.5%;">
+            <tr>
+                <td><a href="https://www.linkedin.com/in/nurhafsaris/" class="btn btn-smol">LinkedIn</a></td>
+                <td><a href="https://www.twitter.com/setygrean/" class="btn btn-smol">Twitter</a></td>
+                <td><a href="https://www.instagram.com/nrhfsrs/" class="btn btn-smol">Instagram</a></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <div id="footer">
+        This website is meant to finish Story 3 in web design course @Fasilkom UI.
+      </div>
+{% endblock content %}
