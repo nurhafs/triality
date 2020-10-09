@@ -1,0 +1,48 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>My Works</title>
+{% endblock meta %}
+
+{% block content %}
+<body style="background: #555548;">
+    {% include 'includes/navbar.html' %}
+    <h1 class="container top-header" style="color: aliceblue;">
+        <hr class="hrlight">Portofolio<hr class="hrlight"></h1>
+    <div class="container outer-porto rounded" style="background:#C5C4B2;">
+        <div class="row">
+            <div class="col-sm-6" style="min-width: 400px;">
+                <img src="{% static 'img/bmc.png' %}" class="porto">
+            </div>
+            <div class="col-sm-6" style="min-width: 400px;">
+                <img src="{% static 'img/bmc ppt.png' %}" class="porto">
+            </div>
+        </div>
+        <h4>My Very First Business Model Canvas</h4>
+        <p>This is my very first competing experience during college. It was around finals but an idea struck within me and my
+          freshmen spirit can't help but to feel challenged to the whole new experience called "competition". So I asked some friend
+           who might be interested with this project. After I managed to gather some friends, we made this together.
+        </p>
+    </div>
+    <div class="container outer-porto rounded" style="background:#D0C6BC;">
+      <div class="row container">
+          <div class="col-sm-6" style="min-width: 400px;">
+          <img src="{% static 'img/globapharm case.png' %}" class="porto img-responsive">
+          </div>
+          <div class="col-sm-6" style="min-width: 400px;">
+          <img src="{% static 'img/case1.png' %}" class="porto img-responsive">
+          </div>
+      </div>
+      <h4>My Case Presentation</h4>
+      <p>Even though I am a Knowledge Managemet staff, I was assigned in Consulting SIG, so I learned a thing or two 
+        during my time attending their class. Thankfully, I was allowed to join in one of their training class where
+        we were given a chance to solve an actual consulting case made by McKinsey, an infamous consulting firm.
+        I worked with my teammates for around 2 weeks trying to figure out the best solution to the problem given.
+      </p>
+  </div>
+    <div class="container" style="padding: 5px 5px 30px;">
+      <h1 style="color: honeydew;">And many more to go....</h1>
+  </div>
+</body>
+{% endblock content %}

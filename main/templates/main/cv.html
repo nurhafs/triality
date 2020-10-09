@@ -1,0 +1,78 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>My Experiences</title>
+{% endblock meta %}
+
+{% block content %}
+<body style="background-color: #36454F; padding-bottom: 20px;">
+    {% include 'includes/navbar.html' %}
+      <h1 class="container top-header" style="color: aliceblue;">
+        <hr class="hrlight">Experience<hr class="hrlight"></h1>
+    <div style="background: ivory;" class="container rounded exp-title">
+            <h3 style="text-align: center;">
+              My Almamater
+            </h3>
+        <div class="row container" style="margin-left: auto; margin-right: auto;">
+            <div class="col-sm-4">
+              <img src="{% static 'img/spensa.png' %}" alt="SMPN 1 sby" class="logo" style="width: 100px;"><br>
+                SMP Negeri 1 Surabaya
+            </div>
+            <div class="col-sm-4">
+              <img src="{% static 'img/smala.png' %}" alt="SMAN 5 sby" class="logo" style="width: 100px;"><br>
+              SMA Negeri 5 Surabaya
+            </div>
+            <div class="col-sm-4">
+              <img src="{% static 'img/ui.png' %}" alt="UI" class="logo"><br>
+              Universitas Indonesia
+            </div>
+        </div>
+    </div>
+    <div>
+      <h3 style="text-align: center; color: whitesmoke;" class="exp-title">
+        My Working Experience
+      </h3>
+      <div class="row" style="margin-top: 2%; color: whitesmoke;">
+        <div class="col-sm-3" style="text-align:right;">
+          2019-2020
+        </div>
+        
+        <div class="col-sm-7" style="text-align: left;">
+          <li style="background-color:slategray;">UKM Karate UI</li>
+          <li style="background-color: slategray;font-style:italic;">Treasurer</li>
+          <li>DPM Fasilkom UI</li>
+          <li style="font-style:italic;">Vice Head of Law Commission</li>
+          <li style="background-color: slategray;">SISTEM Fasilkom UI</li>
+          <li style="background-color: slategray;font-style:italic;">Staff of Knowledge Management</li>
+        </div>
+      </div>
+    </div>    
+      <div class="row" style="padding-bottom:3%; color: whitesmoke;">
+        <div class="col-sm-3" style="text-align:right;">
+          2018-2019
+        </div>
+        <div class="col-sm-7" style="text-align: left;">
+          <li>Student Orientation</li>
+          <li style="font-style:italic;">Vice-Head of FnB division</li>
+        </div>
+      </div> 
+      <div class="container exp-title rounded" style="background: ivory;">
+        <h3>My Skill</h3>
+        <div class="row container" style="margin-left: auto; margin-right: auto;">
+          <div class="col-sm-4">
+            <img src="{% static 'img/python.png' %}" alt="python" class="logo"><br>
+              Python
+          </div>
+          <div class="col-sm-4">
+            <img src="{% static 'img/java.png' %}" alt="java" class="logo"><br>
+            Java
+          </div>
+          <div class="col-sm-4">
+            <img src="{% static 'img/people.png' %}" alt="team" class="logo" style="width:180px;"><br>
+            Working in a team
+          </div>
+      </div>
+</div>
+</body>
+{% endblock content %}

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'basic.html' %}
 {% load static %}
 
 {% block meta %}
@@ -6,34 +6,31 @@
 {% endblock meta %}
 
 {% block content %}
-<div class="main-page">
-    <h1 style="font-size: 6vw;">WELCOME TO</h1>
-    <h2 style="margin-top: 3%;">NUR HAFSARI'S PROFILE WEBPAGE</h2>
+<body id="profile", style="padding-bottom: 40px;">
+    {% include 'includes/navbar.html' %}
     <div>
-    <h3 style="margin-top: 5%;">GET TO KNOW ABOUT ME</h3>
-        <table class="menu">
-            <tr style="font-size: 2vw;">
-                <td><a href="profile-page.html" class="btn btn-big">PROFILE</a></td>
-                <td><a href="works.html" class="btn btn-big">WORKS</a></td>
-                <td><a href="exp.html" class="btn btn-big">EXPERIENCES</a></td>
-            </tr>
-        </table>
+        <h1 class="container top-header" style="color: aliceblue;"><hr class="hrlight">About Me<hr class="hrlight"></h1>
     </div>
-    <div>
-        <a href="addon.html" class="btn btn-smol" style="padding: 20px 0px 10px;">I want to find idea</a>
-    </div>
-        <div class="contact-main">
-        <h3 style="margin-top: 3%;">Find me at:</h3>
-        <table class="menu" style="margin-top: 0.5%;">
-            <tr>
-                <td><a href="https://www.linkedin.com/in/nurhafsaris/" class="btn btn-smol">LinkedIn</a></td>
-                <td><a href="https://www.twitter.com/setygrean/" class="btn btn-smol">Twitter</a></td>
-                <td><a href="https://www.instagram.com/nrhfsrs/" class="btn btn-smol">Instagram</a></td>
-            </tr>
-        </table>
+    
+    <div style="margin-left: auto; margin-right: auto;" class="row container">
+        <div class="col-sm-4 media" style="min-width: 320px;">
+        <img src="{% static 'img/FR46.jpg' %}" alt="this profile's owner" class="img">
+        </div>
+        <div class="col-sm-8 rounded desc media-body container">
+            <h3 style="font-size: 26pt; font-weight: 600;">Nur Hafsari Setyorini</h2>
+            <h3 style="color:dimgray; font-weight: 600">Sari</h3>
+            <p style="font-weight: 500; margin-top: 4%;">A college student majoring in Information System. I enjoy doing sports but 
+               computer science life says nope. Luckily, I still have my other hobbies like watching 
+               youtube, listening to music, or Daydreaming. I'm still trying to live a healthy lifestyle, 
+               but not these days due to stress. To anyone reading this, let's try not to burden ourselves too much.<br><br>
+               I'm a sincere person especially when it comes to work related stuff. I like trying 
+               new things despite being an awkward potato. Unfortunately, there's nothing new this 
+               semester other than my courses experience. I'm into problem-solving and ethics recently.
+               I'm not really good at talking at this moment, so I'm going to put this here as my start-line towards a better version of myself. 
+               I'm not good at expressing myself, but I'm working on it. So if you ever found me saying weird things,
+                please bear with me. With this website, I hope you can learn a thing or two about myself.
+            </p>
         </div>
     </div>
-    <div id="footer">
-        This website is meant to finish Story 3 in web design course @Fasilkom UI.
-      </div>
+    </body>
 {% endblock content %}
