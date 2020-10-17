@@ -22,5 +22,8 @@ urlpatterns = [
     path('profile/', include('main.urls')),
     path('porto/', include('main.urls')),
     path('exp/', include('main.urls')),
-    path('prompt/', include('main.urls'))
+    path('prompt/', include('main.urls')),
+    path('schedule/', include('main.urls')),
+    path('addsched/', include('main.urls')),
+    path('editcourse/', include('main.urls'))
 ]

@@ -1,0 +1,25 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<Title>My Schedule</Title>
+{% endblock meta %}
+
+{% block content %}
+<body>
+    {% include 'includes/navbar.html' %}
+    <div>
+        <h1 class="container top-header" style="color:blue;"><hr>Add Schedule<hr></h1>
+    </div>
+    <div class="container">
+        <h4 style="margin-bottom: 3%;">Input your new course information</h4>
+        <form action="savesched" method="POST">
+            {%  csrf_token %}
+            <table>
+            {{ input_form.as_table}}
+        </table>
+        <input type="submit" value="Submit" style="margin-top: 3%;">
+        </form>    
+    </div>
+</body>
+{% endblock content %}

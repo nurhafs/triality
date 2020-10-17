@@ -1,0 +1,27 @@
+th {
+    font-size: 110%;
+    background: #3A5311;
+    width: fit-content;
+}
+td {
+    text-align: center;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.fa-trash {
+    color: gray;
+}
+
+.layout {
+    background-color:#182414;
+    color: aliceblue;
+    padding: 15px 18px 10px;
+}

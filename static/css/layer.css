@@ -1,7 +1,6 @@
 .main-page {
     text-align: center;
     margin-top: 2%;
-    color: aliceblue;
 }
 h1 {
     font-size: 5vw;
@@ -173,7 +172,7 @@ li {
  }
 
  #welcome {
-    background: #946644;
+    background:#4f7942;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
