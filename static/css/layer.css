@@ -72,11 +72,11 @@ hr {
     border-color: aliceblue;
 }
 .btn-big {
-    color: aliceblue;
+    color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .btn-smol {
-    color: aliceblue;
+    color: black;
     font-size: 115%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
