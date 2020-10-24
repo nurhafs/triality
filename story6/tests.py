@@ -14,7 +14,7 @@ class TestActivity(TestCase):
 
         def test_url_addpeserta(self):
             k = Activity.objects.create(actname="bobo")
-            response = Client().get('/activity/peserta/{{k.id}}')
+            response = Client().get('/activity/peserta/1')
             self.assertEquals(response.status_code, 200)
 
         def test_template_addpeserta(self):
