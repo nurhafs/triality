@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Activities</title>
+{% endblock meta %}
+
+{% block content %}
+<body style="background: #636669;">
+    {% include 'includes/navbar.html' %}
+    <h1 class="container top-header" style="color: aliceblue;">
+        <hr class="hrlight">Activity<hr class="hrlight"></h1>
+    <div class="container" style="color: aliceblue;">
+        <div>
+    <h4 style="margin-bottom: 3%;">Input your activity</h4>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ a_form.as_table }}
+        </table>
+        <button type="submit" class = "btn btn-dark btn-block"style="margin-top: 2%;">Submit</button>
+       </form>
+    </div>
+    <div style="margin-top: 5%;">
+    <table class="container">
+        <thead style="background: black;">
+            <tr style="text-align: center;">
+              <th style="padding: 10px 50px 10px;" scope="col">Activity</th>
+              <td style="padding: 10px 50px 10px;"></td>
+              <td style="padding: 10px 50px 10px;"></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for keg in kegiatan %}
+            <tr>
+                <th style="padding: 10px 50px 10px;" scope="row">{{keg.actname}}</th>
+                <td style="padding: 10px 50px 10px;"><a href="peserta/{{keg.id}}" class="btn btn-info">Lihat/Add Peserta</a></td>
+                <td><a href="delact/{{keg.id}}" class="fa fa-trash" style="color: aliceblue;"></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+{% endblock content %}

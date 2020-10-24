@@ -44,4 +44,3 @@ def delcourse(request, kp):
     obj = Course.objects.get(pk=kp)
     obj.delete()
     return HttpResponseRedirect('/schedule')
-    

@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Add activity</title>
+{% endblock meta %}
+
+{% block content %}
+<body>
+   <h3>Input your activity</h3>
+   <form action="#" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ a_form.as_table }}
+    </table>
+    <input type="submit" value="Submit" style="margin-top: 3%;">
+   </form>
+</body>
+{% endblock content %}

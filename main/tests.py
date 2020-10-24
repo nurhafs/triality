@@ -1,7 +1,6 @@
-from django.test import LiveServerTestCase, TestCase, tag
+from django.test import LiveServerTestCase, TestCase, tag, Client
 from django.urls import reverse
 from selenium import webdriver
-
 
 @tag('functional')
 class FunctionalTestCase(LiveServerTestCase):

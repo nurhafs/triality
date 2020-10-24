@@ -25,5 +25,6 @@ urlpatterns = [
     path('prompt/', include('main.urls')),
     path('schedule/', include('main.urls')),
     path('addsched/', include('main.urls')),
-    path('editcourse/', include('main.urls'))
+    path('editcourse/', include('main.urls')),
+    path('activity/', include('story6.urls')),
 ]
