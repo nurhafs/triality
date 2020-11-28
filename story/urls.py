@@ -27,4 +27,5 @@ urlpatterns = [
     path('addsched/', include('main.urls')),
     path('editcourse/', include('main.urls')),
     path('activity/', include('story6.urls')),
+    path('story7/', include('story7.urls'))
 ]

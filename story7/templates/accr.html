@@ -1,0 +1,97 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Accordion</title>
+{% endblock meta %}
+
+{% block content %}
+<body>
+    <a href="/">Return to Home</a>
+    <h2>Accordion</h2>
+    <div class="container">
+    <table>
+        <tr id = "act">
+            <td style="width: 100%;" scope="row">
+            <button class="accordion">Aktivitas Saat Ini</button>
+            <div class="panel">
+                <p>Menjalani kehidupan <b>TIRANI</b> (Tugas Rapat Nugas Insecure)</p>
+            </div>
+            </td>
+            <td scope="row" id = "up1"><button>^</button></td>
+            <td scope="row" id = "down1"><button>v</button></td>
+        </tr>
+        <tr id = "exp">
+            <td style="width: 100%;" scope="row">
+                <button class="accordion">Pengalaman Organisasi/Kepanitiaan</button>
+                <div class="panel">
+                    <p>DPM, SISTEM, UKM univ, SIWAK 2020</p>
+                </div>
+            </td>
+            <td scope="row" id = "up2"><button>^</button></td>
+            <td scope="row" id = "down2"><button>v</button></td>
+        </tr>
+        <tr id = "ment">
+            <td style="width: 100%;" scope="row">
+                <button class="accordion">Prestasi</button>
+                <div class="panel">
+                    <p>Juara 1 mendapatkan hatinya di alam mimpi</p>
+                </div>
+            </td>
+            <td scope="row" id = "up3"><button>^</button></td>
+            <td scope="row" id = "down3"><button>v</button></td>
+        </tr>
+    
+</table>
+</div>
+<script>
+    $(document).ready(function(){
+        var acr = document.getElementsByClassName("accordion");
+        var x;
+
+        for (x = 0; x < acr.length; x++) {
+            acr[x].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+            });
+        }
+    });
+
+    $(function() {
+
+        $("#down1").click(function() {
+            var a = $(this).closest('tr');
+                a.insertAfter(a.next());
+        });
+        $("#down2").click(function() {
+            var b = $(this).closest('tr');
+                b.insertAfter(b.next());
+        });
+        $("#down3").click(function() {
+            var c = $(this).closest('tr');
+                c.insertAfter(c.next());
+        });
+        $("#up1").click(function() {
+            var d = $(this).closest('tr');
+                d.insertBefore(d.prev());
+        });
+        $("#up2").click(function() {
+            var e = $(this).closest('tr');
+                e.insertBefore(e.prev());
+        });
+        $("#up3").click(function() {
+            var f = $(this).closest('tr');
+                f.insertBefore(f.prev());
+        });
+
+    });
+    </script>
+
+</body>
+
+{% endblock content %}
