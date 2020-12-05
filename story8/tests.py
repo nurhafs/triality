@@ -9,7 +9,7 @@ class TestCariBuku(TestCase):
         self.assertEquals(response.status_code, 200)
     
     def test_url2_caribuku(self):
-        response = Client().get('/books/data/')
+        response = Client().get('/books/data/?q=toy%20world')
         self.assertEquals(response.status_code, 200)
 
     def test_template_caribuku(self):
@@ -21,5 +21,5 @@ class TestCariBuku(TestCase):
         self.assertEquals(response.func, findbooks)
 
     def test_view2_caribuku(self):
-        response = resolve('/books/data/?q=toy%20world')
+        response = resolve('/books/data/')
         self.assertEquals(response.func, olah_data)

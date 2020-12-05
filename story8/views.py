@@ -7,7 +7,7 @@ def findbooks(request):
     return render(request, 'findbk.html')
 
 def olah_data(request):
-    arg = request.GET['q']
+    arg = request.GET['r']
     url = "https://www.googleapis.com/books/v1/volumes?q=" + arg
     y = requests.get(url)
     data = json.loads(y.content)
