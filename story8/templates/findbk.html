@@ -1,0 +1,41 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Find Books</title>
+<style>
+    img {
+        display: flex;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height:370px;
+    position: relative;
+    box-shadow: 10px 10px grey;
+    text-align: center;
+    }
+    .book-author {
+        font-weight: 500;
+        font-size:medium;
+        padding: 2% 0% 3%;
+    }
+</style>
+{% endblock meta %}
+
+{% block content %}
+<body style="background-color: lightgreen;">
+    {% include 'includes/navbar.html' %}
+    <h1 class="container top-header" style="color: black;">
+    <hr>Search Books<hr></h1>
+        <div class="container">
+        <input id="keyword" placeholder="Input the title here" style="margin-bottom: 3%;">
+        <div id="res">
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+
+
+{% endblock content %}
