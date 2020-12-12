@@ -1,0 +1,41 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Login</title>
+<style>
+    .bg {    
+        background: url('https://images.unsplash.com/photo-1482939968273-b388a71b768f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); 
+        background-size:cover;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+</style>
+{% endblock meta %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<body class="bg">
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+        <h2>Cheers for the good work!</h2>
+        <h2>I sincerely hope for your happiness. :))</h2>
+    </div>
+<div id="footer" style="position: absolute;">
+    This webpage is meant to finish Story 9 in Web Design and Development course @Fasilkom UI.
+    Picture by Sid Leigh@unsplash.com
+  </div>
+</body>
+{% else %}
+<body>
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+        <h2>This is not the real content of this page.</h2>
+        <h2>You need to <a href="/special/login/">login.</a></h2>
+    </div>
+    <div id="footer" style="position: absolute;">
+        This webpage is meant to finish Story 9 in Web Design and Development course @Fasilkom UI.
+      </div>
+</body>
+{% endif %}
+{% endblock content %}

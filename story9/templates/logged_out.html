@@ -1,0 +1,18 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<body>
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+    <h3>You have been logged out.</h3>
+    <br>
+    <h3>You will be directed to the main page in a few seconds.</h3>
+    <meta http-equiv="refresh" content="3;url='/'">
+</div>
+</body>
+{% endblock content %}

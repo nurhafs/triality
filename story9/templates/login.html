@@ -1,0 +1,25 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<body style="background-color: rgb(5, 197, 197);">
+    {% include 'includes/navbar.html' %}
+    <div class="container">
+    <h3>Login to your page</h3>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+
+        <br>
+        <button type="submit" class = "btn btn-dark" style="font-size: 16px;">Login</button>
+    </form>
+</div>
+</body>
+{% endblock content %}

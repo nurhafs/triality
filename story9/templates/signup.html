@@ -1,0 +1,30 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Sign Up</title>
+{% endblock meta %}
+
+{% block content %}
+<body style="background-color:rgb(91, 248, 196);">
+    {% include 'includes/navbar.html' %}
+    <div >
+    <div class="container">
+        <h3> Sign up </h3>
+    <form method="POST" style="margin-top: 3%;padding-bottom: 3%">
+        {% csrf_token %}
+        <table>
+            {{ newUserForm.as_table }}
+        </table>
+        <button type="submit" class = "btn btn-dark"style="margin-top: 2%; font-size: 16px;">Submit</button>
+       </form>
+
+       {% if newUserForm.is_valid %}
+       <div style="background-color:darkkhaki;">
+            <h4 style="padding: 2% 1% 2%;">User created. Now you can login by clicking the top right login button or <a href="/special/login/">here</a>.</h4>
+        </div>
+       {% endif %}
+    </div>
+</div>
+</body>
+{% endblock content %}

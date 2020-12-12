@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      #auth {
+        color: black;
+        font-size: 110%;
+      }
+    </style>
+  </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" style="font-size: 150%;" href="/">Home</a>
@@ -24,7 +37,18 @@
                   <li class="nav-item active">
                     <a class="nav-link" style="font-size: 130%;" href="/activity">Activity<span class="sr-only">(current)</span></a>
                   </li>
+                </ul>
+                  {% if user.is_authenticated %}
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/special/" id="auth" style="padding-right: 30px;"><span class="glyphicon glyphicon-user"></span> Hello, {{ user.get_username }}!</a></li>
+                    <li><a href="/special/logout/" id="auth"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                  </ul>
+                  {% else %}
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/special/signup/" id="auth" style="padding-right: 30px;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/special/login/" id="auth"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
+              {% endif %}
             </div>
           </nav>
         </body>

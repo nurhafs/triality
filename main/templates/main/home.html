@@ -8,10 +8,18 @@
 {% block content %} 
 <body id="welcome">
     <div class="main-page">
-        <h1 style="font-size: 500%; margin-top: 15%;">WELCOME TO</h1>
-        <h2 style="margin-top: 5%;">NUR HAFSARI'S PROFILE WEBPAGE</h2>
+        {% if user.is_authenticated %}
+        <div>
+            <h2 style="margin-top: 5%;">Hi, {{ user.get_username }}!</h2>
+        </div>
+        {% else %}
+        <div style="margin-bottom: 17%;"></div>
+        {% endif %}
+        <h1 style="font-size: 500%; margin-top: 10%;">WELCOME TO</h1>
+        <h2 style="margin-top: 5%;padding-bottom: 7%;">NUR HAFSARI'S PROFILE WEBPAGE</h2>
+        <div style="background-color: whitesmoke;">
         <div class="container">
-        <h3 style="margin-top: 16%; font-size: 175%;">GET TO KNOW ABOUT ME</h3>
+        <h3 style="margin-top: 13%; font-weight: 600;padding-top: 3%;">ABOUT MYSELF</h3>
             <table class="menu" style="margin-top: 4%; margin-bottom: 5%;">
                 <tr>
                     <td style="text-align: center; padding: 5px 15px 5px;">
@@ -45,10 +53,11 @@
     </tr>
     </table>
         <div>
-            <a href="/prompt" class="btn btn-smol" style="text-decoration: underline;">I want to find idea</a>
+            <a href="/prompt" class="btn btn-smol" style="text-decoration: underline; margin-bottom: 4%;">I want to find idea</a>
         </div>
+    </div>
             <div class="contact-main">
-            <h3 style="margin-top: 7%;">Find me at:</h3>
+            <h3 style="margin-top: 3%;">Find me at:</h3>
             <table class="menu" style="margin-top: 3%;">
                 <tr>
                     <td><a href="https://www.linkedin.com/in/nurhafsaris/" class="fa fa-linkedin"></a></td>
@@ -59,7 +68,7 @@
             </div>
         </div>
         <div id="footer">
-            This website is meant to finish Story 5 in Web Design and Development course @Fasilkom UI.
+            This website is meant to finish Stories in Web Design and Development course @Fasilkom UI.
           </div>
     </body>
 {% endblock content %}
