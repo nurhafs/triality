@@ -16,6 +16,7 @@ def createUser(request):
         if makeUser.is_valid():
             user = User.objects.create_user(
 				username=makeUser.cleaned_data.get('username'),
+                email=makeUser.cleaned_data.get('email'),
 				password=makeUser.cleaned_data.get('password')
 				)
             user.save()
